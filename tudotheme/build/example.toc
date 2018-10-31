@@ -1,2 +1,0 @@
-\select@language {german}
-\beamer@sectionintoc {1}{Blindtext}{4}{0}{1}
