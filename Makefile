@@ -1,16 +1,13 @@
-all: build/example.pdf
+all: build/main.pdf
 
 texoptions = \
 	     --lualatex \
-	     --interaction=nonstopmode \
+	     --interaction=batchpmode \
 	     --halt-on-error \
 	     --output-directory=build
 
-build/example.pdf: FORCE | build
-	latexmk $(texoptions) example.tex
-
-preview: FORCE | build
-	latexmk $(texoptions) -pvc example.tex
+build/main.pdf: FORCE | build
+	latexmk $(texoptions) main.tex
 
 FORCE:
 
