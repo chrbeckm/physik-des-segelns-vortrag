@@ -2,11 +2,13 @@ all: build/main.pdf
 
 texoptions = \
 	     --lualatex \
-	     --interaction=batchpmode \
+	     --interaction=batchmode \
 	     --halt-on-error \
 	     --output-directory=build
 
 build/main.pdf: FORCE | build
+	TEXINPUTS=build: \
+	BIBINPUTS=build: \
 	latexmk $(texoptions) main.tex
 
 FORCE:
@@ -16,3 +18,5 @@ build:
 
 clean:
 	rm -r build
+
+.PHONY: all clean
