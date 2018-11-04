@@ -1,4 +1,4 @@
-all: build/main.pdf
+all: build/main.pdf build/notizen.pdf
 
 texoptions = \
 	     --lualatex \
@@ -10,6 +10,11 @@ build/main.pdf: FORCE | build
 	TEXINPUTS=build: \
 	BIBINPUTS=build: \
 	latexmk $(texoptions) main.tex
+
+build/notizen.pdf: FORCE | build
+	TEXINPUTS=build: \
+	BIBINPUTS=build: \
+	latexmk $(texoptions) notizen.tex
 
 FORCE:
 
