@@ -1,21 +1,13 @@
 \PassOptionsToPackage{unicode}{hyperref}
-\documentclass[aspectratio=1610, professionalfonts, 9pt]{beamer}
+\documentclass[aspectratio=1609, professionalfonts, 9pt, bibliography=totoc]{beamer}
 
 \usefonttheme[onlymath]{serif}
 \usetheme[showtotalframes]{tudo}
 
-\ifluatex
-  \usepackage{polyglossia}
-  \setmainlanguage{german}
-\else
-  \ifxetex
-    \usepackage{polyglossia}
-    \setmainlanguage{german}
-  \else
-    \usepackage[german]{babel}
-  \fi
-\fi
-
+\usepackage{polyglossia}
+\setmainlanguage{german}
+\usepackage[style=alphabetic]{biblatex}
+\addbibresource{lit.bib}
 
 % Mathematik
 \usepackage{amsmath}
@@ -51,27 +43,41 @@
 
 \section{Grundlagen}
 \begin{frame}
-	\frametitle{Wer betreibt das GPS?
-		\newline gefolgt von einem Blindtext}
-Dieser Text dient nur zur Veranschaulichung des Textsatzes. Niemand sollte jemals, aus keinem noch so gutem Grund, so viel Text auf eine Folie packen.
-
-Dies ist ein Blindtext. Dieser Text ist nicht dafür vorgesehen, den Betrachter in die Welt der Dunkelheit zu führen, sondern dafür, einfach etwas Leeres mit etwas Inhaltlosem zu füllen.
-
-Dies ist ein Blindtext. Dieser Text ist nicht dafür vorgesehen, den Betrachter in die Welt der Dunkelheit zu führen, sondern dafür, einfach etwas Leeres mit etwas Inhaltlosem zu füllen.
-
-Dies ist ein Blindtext. Dieser Text ist nicht dafür vorgesehen, den Betrachter in die Welt der Dunkelheit zu führen, sondern dafür, einfach etwas Leeres mit etwas Inhaltlosem zu füllen.
+	\frametitle{Grundlagen}
+    \begin{block}{Betreiber}
+        US-Regierung, Verteidigungsministerium
+    \end{block}
+    \begin{block}{Budget}
+        2017: \$908,262 mil.\\
+        2018: \$1,1 mrd
+    \end{block}
+    Bezahlt aus den Steuern der US-Bürger
+    \cite{gpsgov}
 \end{frame}
 
-\begin{frame}{title}
-  \begin{enumerate}
-    \item test
-    \item test
-  \end{enumerate}
-\end{frame}
+%\begin{frame}{Historische Meilensteine}
+%    \begin{columns}
+%        \begin{column}{0.5\paperwidth}
+%            \begin{itemize}
+%                \item 1957: Sputnik
+%                \item 1964: US-Marine, TRANSIT System
+%                \begin{itemize}
+%                    \item Bill Guier (Mathematiker)
+%                    \item George Weiffenbach (Physiker)
+%                \end{itemize}
+%            \end{itemize}
+%        \end{column}
+%        \begin{column}{0.5\paperwidth}
+%            \begin{figure}
+%                \includegraphics[width=0.4\paperwidth]{images/transit-satellite.jpg}
+%                \caption{Tests am zweiten Transit Satelliten, }%\cite{TimeAndNavigation}}
+%                \label{fig:transit}
+%            \end{figure}
+%        \end{column}
+%    \end{columns}
+%\end{frame}
 
-\begin{frame}{title}
-  \begin{block}{title}
-    ANlsnldas dkmadföonslkadm x
-  \end{block}
+\section{Literatur}
+\begin{frame}{Literatur}
+    \printbibliography
 \end{frame}
-\end{document}
