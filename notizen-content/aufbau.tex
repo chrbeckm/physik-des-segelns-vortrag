@@ -1,0 +1,52 @@
+\section{Aufbau}
+\label{sec:aufbau}
+
+\begin{itemize}
+    \item Bodenstationen (Bild), Synchronisierungsstelle ist Schriever Air Force Base in Colorado Springs
+    \begin{enumerate}
+        \item Monitor Station
+        \begin{enumerate}
+            \item aufzeichnen der Daten bei Überflug
+            \item an Master Control Station weiterleiten
+            \item 16 Stück, 6 Air Force, 10 National Geospital-Intelligence Agency
+        \end{enumerate}
+        \item Master Control Station
+        \begin{enumerate}
+            \item Berechnen der Präzession der Satelliten
+            \item Navigationsanweisungen berechnen
+            \item Sicherstellung der Langlebigkeit und Genauigkeit
+            \item Positionierung der Satelliten für eine bestmögliche Konstellation
+        \end{enumerate}
+        \item Boden-Antennen:
+        \begin{enumerate}
+            \item Senden Befehle, Software-Updates an Satelliten
+            \item 4 GPS eigene, 7 \textbf{A}ir \textbf{F}orce \textbf{S}atellite \textbf{C}ontrol \textbf{N}etwork
+        \end{enumerate}
+    \end{enumerate}
+    \item Konstellation
+    \begin{enumerate}
+        \item 20 200km Höhe
+        \item 2 Umläufe pro Tag pro Satellit
+        \item 6 gleichmäßig verteilte Orbitale mit 4 Satelliten pro Bahn -> 24 Satelliten, an jedem Punkt min 4 Satelliten erreichbar
+        \item Ersatzsatelliten falls längere Wartungsarbeiten anstehen, Ausfälle passieren
+        \item 2011: Umpositionierung, \textit{Expandable 24}, jetzt 27, bessere Abdeckung in vielen Teilen der Erde
+    \end{enumerate}
+\end{itemize}
+\subsection{Satelliten}
+\begin{table}
+    \caption{Die verschiedenen Satelliten im Überblick.}
+    \label{tab:satelliten}
+    \begin{tabular}{c S[table-format=2.0] c S[table-format=2.1] c}
+        \toprule
+        {Name} & {in Nutzung} & {Start} & {Lebensspanne\;/\;$a$} & {Änderungen} \\
+        \midrule
+        Block IIA   &  1 & 1990-1997 & 7.5 & \\
+        Block IIR   & 11 & 1997-2004 & 7.5 & Onboard Uhrüberwachung \\
+        Block IIR-M &  7 & 2005-2009 & 7.5 & Mehr und stärkere M(ilitär)signale \\
+        Block IIF   & 12 & 2010-2016 & 12  & neue Uhr, bessere Signalabstrahlung \\
+        GPS III     &  0 & Dez 2018  & 15  & verbesserte Zuverlässigkeit, kein SA mehr \\
+        GPS IIIF    &  0 & Dez 2018  & 15  & " , Laser Reflektion, SAR kompatibel \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+SA = Selective Activity; Möglichkeit das zivile GPS runterzufahren, \textit{national security reasons}
