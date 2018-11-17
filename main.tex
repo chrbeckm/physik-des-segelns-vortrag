@@ -13,47 +13,14 @@
     \maketitle
     \begin{frame}
         \frametitle{Einführung}
-        \tableofcontents%[pausesections]
+        \tableofcontents
     \end{frame}
-    \section{Grundlagen}
-    \begin{frame}
-	       \frametitle{Grundlagen}
-           \begin{block}{Betreiber}
-               US-Regierung, Verteidigungsministerium
-           \end{block}
-           \begin{block}{Budget}
-               2017: \$908,262 mil.\\
-               2018: \$1,1 mrd
-           \end{block}
-           Bezahlt aus den Steuern der US-Bürger
-           \cite{gpsgov}
-       \end{frame}
-
-       \begin{frame}{Historische Meilensteine}
-           \begin{columns}
-               \begin{column}{0.5\paperwidth}
-                   \begin{itemize}
-                       \item 1957: Sputnik
-                       \item 1964: US-Marine, TRANSIT System
-                       \begin{itemize}
-                           \item Bill Guier (Mathematiker)
-                           \item George Weiffenbach (Physiker)
-                       \end{itemize}
-                       \item Kalter Krieg
-                   \end{itemize}
-               \end{column}
-               \begin{column}{0.5\paperwidth}
-                   \begin{figure}
-                       \includegraphics[width=0.4\paperwidth]{images/transit-satellite.jpg}
-                       \caption{Tests am zweiten Transit Satelliten, \cite{TimeAndNavigation}}
-                       \label{fig:transit}
-                   \end{figure}
-               \end{column}
-           \end{columns}
-       \end{frame}
-
-       \section{Literatur}
-       \begin{frame}{Literatur}
-           \printbibliography
-       \end{frame}
+    \input{main-content/grundlagen.tex}
+    \input{main-content/aufbau.tex}
+    \input{main-content/signale.tex}
+    \section{Literatur}
+    \begin{frame}{Literatur}
+        \nocite{*}
+        \printbibliography
+    \end{frame}
 \end{document}
