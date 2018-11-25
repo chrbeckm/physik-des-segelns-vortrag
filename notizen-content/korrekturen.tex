@@ -2,25 +2,28 @@
 \label{sec:korrekturen}
 
 \subsubsection{Zeitverzögerungen am Signal}
+\label{sec:ZeitImSignal}
 Erste Definitionen:
 \begin{align}
-    t^\text{S} &:= \text{Emissionszeit am Satelliten}\\
-    δ^\text{S} &:= \text{Verzögerungen im Satelliten}\\
+    \text{S}   &= \text{Satellit}\\
+    \text{E}   &= \text{Empfänger}\\
+    t^\text{S} &= \text{Emissionszeit am Satelliten}\\
+    δ^\text{S} &= \text{Verzögerungen im Satelliten, z.B. durch Rechenzeiten}\\
     t^\text{S} &= t^\text{S}(\text{GPS}) + δ^\text{S}\\
-    t_\text{E} &:= \text{Empfängerzeit}\\
-    δ_\text{E} &:= \text{Verzögerungen im Empfänger z.B. durch Rechenzeiten}\\
+    t_\text{E} &= \text{Empfängerzeit}\\
+    δ_\text{E} &= \text{Verzögerungen im Empfänger}\\
     t^\text{E} &= t^\text{E}(\text{GPS}) + δ^\text{E}
-    \shortintertext{Damit folgt der Zeitunterschied}
+    \intertext{Damit folgt der Zeitunterschied}
     \increment t &= t_\text{E} - t^\text{S} = \increment t(\text{GPS}) +\incrementδ
-    \shortintertext{und die Pseudoentfernung}
+    \intertext{und die Pseudoentfernung}
     R &= \symup{c}\increment t = ρ + \symup{c}\incrementδ\;.
-    \shortintertext{Diese kann in eine Taylorreihe entwickelt werden}
+    \intertext{Diese kann in eine Taylorreihe entwickelt werden}
     ρ\left(t_\text{E},\;t^\text{S}\right) &= ρ\left(t_\text{E},\;t^\text{S}+\increment t\right) = ρ\left(t^\text{S}\right)+\dot{ρ}\left(t^\text{S}\right)\cdot\increment t\;,
-    \shortintertext{mit der radialen Geschwindigkeit  der Satelliten}
+    \intertext{mit der radialen Geschwindigkeit  der Satelliten}
     \dot{ρ} &\approx \SI{0.9}{\kilo\meter\per\second}.
-    \shortintertext{Die Laufzeit des Signal kann mit}
+    \intertext{Die Laufzeit des Signal kann mit}
     \increment t &\approx\SI{0.07}{\second}
-    \shortintertext{abgeschätzt werden, das führt zu einem Korrekturterm von}
+    \intertext{abgeschätzt werden, das führt zu einem Korrekturterm von}
     \dot{ρ}\left(t^\text{S}\right)\cdot\increment t &\approx\SI{60}{\meter}\;.
 \end{align}
 
@@ -28,20 +31,20 @@ Erste Definitionen:
 \begin{align}
     φ^\text{S}(t) &= \text{Phase des empfangenen Signals}\\
     φ_\text{E}(t) &= \text{Phase eines internen Referenzsignals}\\
-    \shortintertext{Beide Signale starten bei}
+    \intertext{Beide Signale starten bei}
     t_0 &= 0\;,
-    \shortintertext{die beiden Phasen können dann mit}
+    \intertext{die beiden Phasen können dann mit}
     φ^\text{S}(t) &= f\cdot t-\frac{ρ}{\symup{c}}f+f\cdotδ^\text{S}\\
     φ_\text{E}(t) &= f\cdot t+f\cdotδ^\text{E}
-    \shortintertext{beschrieben werden. Die relative Differenz der beiden Phasen ist}
+    \intertext{beschrieben werden. Die relative Differenz der beiden Phasen ist}
     \frac{\symup{d}f}{f} &= \num{e-12}\;.
-    \shortintertext{Bei einer Trägerfrequenz von}
+    \intertext{Bei einer Trägerfrequenz von}
     f &= \SI{1.5}{\giga\hertz}
-    \shortintertext{folgt eine Ungenauigkeit von}
+    \intertext{folgt eine Ungenauigkeit von}
     \symup{d}f &= \SI{1.5e-3}{\hertz}\;.
-    \shortintertext{Die absolute Differenz}
+    \intertext{Die absolute Differenz}
     φ^\text{S}_\text{E} &= -\frac{ρ}{\symup{c}}f-f\cdot\incrementδ
-    \shortintertext{kann mit der Anzahl $N$ an empfangenen Signalen als}
+    \intertext{kann mit der Anzahl $N$ an empfangenen Signalen als}
     φ^\text{S}_\text{E} &= \incrementφ^\text{S}_\text{E}|^t_{t_0}+N
 \end{align}
 geschrieben werden.
