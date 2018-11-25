@@ -7,15 +7,15 @@ Erste Definitionen:
     t^\text{S} &:= \text{Emissionszeit am Satelliten}\\
     δ^\text{S} &:= \text{Verzögerungen im Satelliten}\\
     t^\text{S} &= t^\text{S}(\text{GPS}) + δ^\text{S}\\
-    t_\text{R} &:= \text{Empfängerzeit}\\
-    δ_\text{R} &:= \text{Verzögerungen im Empfänger z.B. durch Rechenzeiten}\\
-    t^\text{R} &= t^\text{R}(\text{GPS}) + δ^\text{R}
+    t_\text{E} &:= \text{Empfängerzeit}\\
+    δ_\text{E} &:= \text{Verzögerungen im Empfänger z.B. durch Rechenzeiten}\\
+    t^\text{E} &= t^\text{E}(\text{GPS}) + δ^\text{E}
     \shortintertext{Damit folgt der Zeitunterschied}
-    \increment t &= t_\text{R} - t^\text{S} = \increment t(\text{GPS}) +\incrementδ
+    \increment t &= t_\text{E} - t^\text{S} = \increment t(\text{GPS}) +\incrementδ
     \shortintertext{und die Pseudoentfernung}
     R &= \symup{c}\increment t = ρ + \symup{c}\incrementδ\;.
     \shortintertext{Diese kann in eine Taylorreihe entwickelt werden}
-    ρ\left(t_\text{R},\;t^\text{S}\right) &= ρ\left(t_\text{R},\;t^\text{S}+\increment t\right) = ρ\left(t^\text{S}\right)+\dot{ρ}\left(t^\text{S}\right)\cdot\increment t\;,
+    ρ\left(t_\text{E},\;t^\text{S}\right) &= ρ\left(t_\text{E},\;t^\text{S}+\increment t\right) = ρ\left(t^\text{S}\right)+\dot{ρ}\left(t^\text{S}\right)\cdot\increment t\;,
     \shortintertext{mit der radialen Geschwindigkeit  der Satelliten}
     \dot{ρ} &\approx \SI{0.9}{\kilo\meter\per\second}.
     \shortintertext{Die Laufzeit des Signal kann mit}
@@ -27,12 +27,12 @@ Erste Definitionen:
 \subsubsection{Phasenverschiebung durch Doppler}
 \begin{align}
     φ^\text{S}(t) &= \text{Phase des empfangenen Signals}\\
-    φ_\text{R}(t) &= \text{Phase eines internen Referenzsignals}\\
+    φ_\text{E}(t) &= \text{Phase eines internen Referenzsignals}\\
     \shortintertext{Beide Signale starten bei}
     t_0 &= 0\;,
     \shortintertext{die beiden Phasen können dann mit}
     φ^\text{S}(t) &= f\cdot t-\frac{ρ}{\symup{c}}f+f\cdotδ^\text{S}\\
-    φ_\text{R}(t) &= f\cdot t+f\cdotδ^\text{R}
+    φ_\text{E}(t) &= f\cdot t+f\cdotδ^\text{E}
     \shortintertext{beschrieben werden. Die relative Differenz der beiden Phasen ist}
     \frac{\symup{d}f}{f} &= \num{e-12}\;.
     \shortintertext{Bei einer Trägerfrequenz von}
@@ -40,9 +40,9 @@ Erste Definitionen:
     \shortintertext{folgt eine Ungenauigkeit von}
     \symup{d}f &= \SI{1.5e-3}{\hertz}\;.
     \shortintertext{Die absolute Differenz}
-    φ^\text{S}_\text{R} &= -\frac{ρ}{\symup{c}}f-f\cdot\incrementδ
+    φ^\text{S}_\text{E} &= -\frac{ρ}{\symup{c}}f-f\cdot\incrementδ
     \shortintertext{kann mit der Anzahl $N$ an empfangenen Signalen als}
-    φ^\text{S}_\text{R} &= \incrementφ^\text{S}_\text{R}|^t_{t_0}+N
+    φ^\text{S}_\text{E} &= \incrementφ^\text{S}_\text{E}|^t_{t_0}+N
 \end{align}
 geschrieben werden.
 Abbildung 6.1 aus {\small[H-W,L,C], S.90} zeigt dieses.
