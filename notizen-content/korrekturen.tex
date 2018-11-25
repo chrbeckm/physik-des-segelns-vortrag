@@ -1,6 +1,30 @@
 \subsection{Korrekturen}
 \label{sec:korrekturen}
 
+\subsubsection{Phasenverschiebung durch Doppler}
+\begin{align}
+    φ^\text{S}(t) &= \text{Phase des empfangenen Signals} \\
+    φ_\text{E}(t) &= \text{Phase eines internen Referenzsignals}
+    \intertext{Beide Signale starten bei}
+    t_0 &= 0\;,
+    \intertext{die beiden Phasen können dann mit}
+    φ^\text{S}(t) &= f\cdot t-\frac{ρ}{\symup{c}}f+f\cdotδ^\text{S}\\
+    φ_\text{E}(t) &= f\cdot t+f\cdotδ^\text{E}
+    \intertext{beschrieben werden. Die relative Differenz der beiden Phasen ist}
+    \frac{\symup{d}f}{f} &= \num{e-12}\;.
+    \intertext{Bei einer Trägerfrequenz von}
+    f &= \SI{1.5}{\giga\hertz}
+    \intertext{folgt eine Ungenauigkeit von}
+    \symup{d}f &= \SI{1.5e-3}{\hertz}\;.
+    \intertext{Die absolute Differenz}
+    φ^\text{S}_\text{E} &= -\frac{ρ}{\symup{c}}f-f\cdot\incrementδ
+    \intertext{kann mit der Anzahl $N$ an empfangenen Signalen als}
+    φ^\text{S}_\text{E} &= \incrementφ^\text{S}_\text{E}|^t_{t_0}+N
+\end{align}
+geschrieben werden.
+Abbildung 6.1 aus {\small[H-W,L,C], S.90} zeigt dieses.
+Die dicke Linie ist der wahre Orbit und die dünne Linie die ohne Phasenverschiebung errechnete.
+
 \subsubsection{Zeitverzögerungen am Signal}
 \label{sec:ZeitImSignal}
 Erste Definitionen:
@@ -27,50 +51,10 @@ Erste Definitionen:
     \dot{ρ}\left(t^\text{S}\right)\cdot\increment t &\approx\SI{60}{\meter}\;.
 \end{align}
 
-\subsubsection{Phasenverschiebung durch Doppler}
-\begin{align}
-    φ^\text{S}(t) &= \text{Phase des empfangenen Signals}\\
-    φ_\text{E}(t) &= \text{Phase eines internen Referenzsignals}\\
-    \intertext{Beide Signale starten bei}
-    t_0 &= 0\;,
-    \intertext{die beiden Phasen können dann mit}
-    φ^\text{S}(t) &= f\cdot t-\frac{ρ}{\symup{c}}f+f\cdotδ^\text{S}\\
-    φ_\text{E}(t) &= f\cdot t+f\cdotδ^\text{E}
-    \intertext{beschrieben werden. Die relative Differenz der beiden Phasen ist}
-    \frac{\symup{d}f}{f} &= \num{e-12}\;.
-    \intertext{Bei einer Trägerfrequenz von}
-    f &= \SI{1.5}{\giga\hertz}
-    \intertext{folgt eine Ungenauigkeit von}
-    \symup{d}f &= \SI{1.5e-3}{\hertz}\;.
-    \intertext{Die absolute Differenz}
-    φ^\text{S}_\text{E} &= -\frac{ρ}{\symup{c}}f-f\cdot\incrementδ
-    \intertext{kann mit der Anzahl $N$ an empfangenen Signalen als}
-    φ^\text{S}_\text{E} &= \incrementφ^\text{S}_\text{E}|^t_{t_0}+N
-\end{align}
-geschrieben werden.
-Abbildung 6.1 aus {\small[H-W,L,C], S.90} zeigt dieses.
-Die dicke Linie ist der Orbit und die dünne die ohne Phasewnverschiebung errechnete.
-
-\subsubsection{Relativistische Effekte}
-Von der Verscheibung der Frequenz
-\begin{align}
-    f &= f'\sqrt{1-\frac{v^2}{\symup{c}^2}}\\
-    \frac{f_0'-f_0}{f_0} &= \num{-4.464e-10}
-\end{align}
-ist vor allem die Uhr betroffen.
-
-\begin{table}
-    \centering
-    \caption{Fehlerquellen und ihre Effekte}
-    \begin{tabular}{c c}
-        \toprule
-        {Fehlerquelle} & {Effekt} \\
-        \midrule
-        Signal    & Reflektionen in Atmosphäre und an Gebäuden \\
-        Satellit  & falsche Orbitale \\
-                  & Systematische Uhrfehler \\
-        Empfänger & $^{\---}"^{\---}$ \\
-                  & variable Emfängerfrequenz \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+% \subsubsection{Relativistische Effekte}
+% Von der Verscheibung der Frequenz
+% \begin{align}
+%     f &= f'\sqrt{1-\frac{v^2}{\symup{c}^2}}\\
+%     \frac{f_0'-f_0}{f_0} &= \num{-4.464e-10}
+% \end{align}
+% ist vor allem die Uhr betroffen.

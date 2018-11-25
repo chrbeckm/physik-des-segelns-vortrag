@@ -1,0 +1,42 @@
+\section{Positionsbestimmung}
+
+\begin{frame}{Phasenverschiebung}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{align}
+                φ^\text{S}(t) &= f\cdot t-\frac{ρ}{\symup{c}}f+f\cdotδ^\text{S} \\
+                φ_\text{E}(t) &= f\cdot t+f\cdotδ^\text{E} \\
+                φ^\text{S}_\text{E} &= -\frac{ρ}{\symup{c}}f-f\cdot\incrementδ \\
+                &= \incrementφ^\text{S}_\text{E}|^t_{t_0}+N \\
+                N &= \text{\# empfangene Signale}
+            \end{align}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth]{images/phasenverschiebung.jpg}
+            \end{figure}
+            \centering{\small[C,H-W,L]}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Zeitverzögerungen am Signal}
+    S = Satellit, E = Empfänger
+    \begin{align}
+        t &= \text{Sende- /Empfangszeit} \\
+        δ &= \text{zeitliche Verzögerungen, z.B. durch Rechenzeiten} \\
+        t &= t(\text{GPS}) + δ
+        \shortintertext{Zeitunterschied:}
+        \increment t &= t_\text{E} - t^\text{S} = \increment t(\text{GPS}) +\incrementδ
+        \shortintertext{Pseudoentfernung:}
+        R &= \symup{c}\increment t = ρ + \symup{c}\incrementδ
+        \shortintertext{Taylorreihe:}
+        ρ\left(t_\text{E},\;t^\text{S}\right) &= ρ\left(t_\text{E},\;t^\text{S}+\increment t\right) = ρ\left(t^\text{S}\right)+\dot{ρ}\left(t^\text{S}\right)\cdot\increment t
+        \shortintertext{Größe der ersten Korrektur:}
+        \dot{ρ}\left(t^\text{S}\right)\cdot\increment t &\approx \SI{0.9}{\kilo\meter\per\second}\cdot\SI{0.07}{\second} =\SI{63}{\meter}
+    \end{align}
+\end{frame}
+
+\begin{frame}{Ortskoordinaten}
+
+\end{frame}

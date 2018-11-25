@@ -7,9 +7,25 @@ Wir folgen dem Unterkapitel \ref{sec:ZeitImSignal}.
 \begin{align}
     R_\text{E}^\text{S}(t) &= ρ_\text{E}^\text{S}(t) + \symup{c}\incrementδ_\text{E}^\text{S}(t) \label{eqn:entfernung}\\
     ρ_\text{E}^\text{S}(t) &= \sqrt{\left(X^\text{S}(t)-X_\text{E}\right)^2+\left(Y^\text{S}(t)-Y_\text{E}\right)^2+\left(Z^\text{S}(t)-Z_\text{E}\right)^2}
-    \intertext{Mit einem Satelliten kommt man so auf 4 Unbekannte, die 3 Koordinaten des Empfängers und die Uhrenfehler $δ$. Dieser wird wie folgt angenähert}
+    \intertext{Mit einem Satelliten kommt man so auf vier Unbekannte, die drei Koordinaten des Empfängers und die Uhrenfehler $δ$. Dieser wird wie folgt angenähert}
     δ(t) &= a_0 + a_1(t-t_\text{r})+ a_2(t-t_\text{r})^2\;,
     \intertext{mit einer Referenzzeit $t_\text{r}$. Damit kann die Gleichung \eqref{eqn:entfernung} so umgestellt werden, dass auf der linken Seite Messgrößen stehen und auf der rechten Seite die Unbekannten}
     R_\text{E}^\text{S}(t) + \symup{c}δ^\text{S}(t) &= ρ_\text{E}^\text{S}(t) + \symup{c}δ_\text{E}\;.
 \end{align}
 Zur Bestimmung der Position werden vier Satelliten benötigt, wenn die Höhe nicht interessiert, reichen drei Satelliten.
+
+\begin{table}
+    \centering
+    \caption{Fehlerquellen und ihre Effekte}
+    \begin{tabular}{c c}
+        \toprule
+        {Fehlerquelle} & {Effekt} \\
+        \midrule
+        Signal    & Reflektionen in Atmosphäre und an Gebäuden \\
+        Satellit  & falsche Orbitale \\
+                  & Systematische Uhrfehler \\
+        Empfänger & $^{\---}"^{\---}$ \\
+                  & variable Emfängerfrequenz \\
+        \bottomrule
+    \end{tabular}
+\end{table}
