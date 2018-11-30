@@ -1,21 +1,44 @@
 \section{Signale}
 \label{sec:signale}
 
-\begin{frame}{Verteilung der zivilen Frequenzen}
-    \begin{table}
-        \begin{tabular}{c l}
-            \toprule
-            {Satellit} & {Frequenzen} \\
-            \midrule
-            Block IIA   & L1 C/A \\
-            Block IIR   & L1 C/A, L1 P(Y) \\
-            Block IIR-M & L1 C/A, L1 P(Y), L2C \\
-            Block IIF   & L1 C/A, L1 P(Y), L2C, L5 \\
-            GPS III     & L1 C/A, L1 P(Y), L2C, L5, L1C \\
-            GPS IIIF    & L1 C/A, L1 P(Y), L2C, L5, L1C \\
-            \bottomrule
-        \end{tabular}
-    \end{table}
+\begin{frame}{Frequenzen}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering{Verteilung der Frequenzen}
+            \begin{table}
+                \centering
+                \begin{tabular}{c S[table-format=1.0]}
+                    \toprule
+                    {Satellit} & {\# Frequenzen} \\
+                    \midrule
+                    Block IIA   & 1 \\
+                    Block IIR   & 2 \\
+                    Block IIR-M & 3 \\
+                    Block IIF   & 4 \\
+                    GPS III     & 5 \\
+                    GPS IIIF    & 5 \\
+                    \bottomrule
+                \end{tabular}
+            \end{table}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering{Namen der Frequenzen}
+            \begin{table}
+                \centering
+                \begin{tabular}{c S[table-format=4.2]}
+                    \toprule
+                    {Name} & {$f\:/\:\si{\mega\hertz}$} \\
+                    \midrule
+                    L1 C/A  & $\num{1575.42}$ \\
+                    L1 P(Y) & $\num{1575.42}$ \\
+                    L2C     & $\num{1227.60}$ \\
+                    L5      & $\num{1176.45}$ \\
+                    L1C     & $\num{1575.42}$ \\
+                    \bottomrule
+                \end{tabular}
+            \end{table}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Das Signal}

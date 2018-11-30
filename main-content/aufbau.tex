@@ -1,4 +1,12 @@
 \section{Aufbau}
+\begin{frame}{Aufbau}
+    \begin{itemize}
+        \item Bodenstationen
+        \item[]~
+        \item Satelliten
+    \end{itemize}
+\end{frame}
+
 \begin{frame}{Bodenstationen, {\small [gps.gov]}}
     \begin{figure}
         \centering
@@ -31,20 +39,28 @@
     \begin{table}
         \begin{tabular}{c S[table-format=2.0] c S[table-format=2.1] c}
             \toprule
-            {Generation} & {Aktiv} & {Start} & {\enquote{MHD}} & {Änderungen} \\
+            {} & {Aktiv} & {Start} & {\enquote{MHD}} & {Änderungen} \\
             \midrule
-            Block IIA   &  1 & 1990-1997 & 7.5 & \\
-            Block IIR   & 11 & 1997-2004 & 7.5 & Onboard Uhrüberwachung \\
-            Block IIR-M &  7 & 2005-2009 & 7.5 & Mehr und stärkere M(ilitär)signale \\
-            Block IIF   & 12 & 2010-2016 & 12  & neue Uhr, bessere Signalabstrahlung \\
-            GPS III     &  0 & Dez 2018  & 15  & bessere Zuverlässigkeit, kein SA mehr \\
-            GPS IIIF    &  0 & Dez 2018  & 15  & $^{\---}"^{\---}$ , SAR kompatibel \\
+            IIA   &  1 & 1990-1997 & 7.5 & \\
+            IIR   & 11 & 1997-2004 & 7.5 & Onboard Uhrüberwachung \\
+            IIR-M &  7 & 2005-2009 & 7.5 & Mehr und stärkere M(ilitär)signale \\
+            IIF   & 12 & 2010-2016 & 12  & neue Uhr, bessere Signalabstrahlung \\
+            III   &  0 & Dez 2018  & 15  & bessere Zuverlässigkeit, kein SA mehr \\
+            IIIF  &  0 & Dez 2018  & 15  & $^{\---}"^{\---}$ , SAR kompatibel \\
             \bottomrule
         \end{tabular}
     \end{table}
-    SA = selective Availability, ziviles GPS stören\\
+\end{frame}
+
+\begin{frame}{SA = selective Availability}
+    ziviles GPS stören\\
     Grund: \textit{national security reasons}\\
-    Abschaltung: 02.05.2000
+    Abschaltung: 02.05.2000, 4 Uhr
+    \begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{images/sa-hoehe.PDF}
+    \end{figure}
+    Höhenmessung in Kootwijk (Niederlande), 02.05.2000\;\;{\small [C,H-W,L](S.90)}
 \end{frame}
 
 \begin{frame}{GPS-Satelliten}
@@ -64,4 +80,5 @@
             \centering{Typ III}
         \end{column}
     \end{columns}
+    \centering{\small [gps.gov]}
 \end{frame}
