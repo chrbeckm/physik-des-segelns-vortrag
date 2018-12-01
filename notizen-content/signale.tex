@@ -10,9 +10,15 @@ Durch Multiplikation mit 154 und 120\\
 PRN = pseudorandom noise auf Frequenzen\\
 + Datensignal\\~\\
 Kodierungen:\\
-C/A = Coarse/Acquisition-codeS (Zivil), für das \textbf{S}tandard \textbf{P}ositioning \textbf{S}ystem, $\SI{300}{\meter}$ Wellenlänge, $f=\SI{1.023}{\mega\hertz}$\\
-P-code = \textbf{P}recision-Code, Militär, $f=\SI{10.23}{\mega\hertz}$\\
+C/A = Coarse/Acquisition-codeS (Zivil), für das \textbf{S}tandard \textbf{P}ositioning \textbf{S}ystem, $\SI{300}{\meter}$ Wellenlänge, $f=\SI{1.023}{\mega\hertz}$, jede Millisekunde wiederholt\\
+P-code = \textbf{P}recision-Code, Militär, $f=\SI{10.23}{\mega\hertz}$, wiederholt alle 266.4 Tage\\
+W/Code zum entschlüsseln von P nach Y, $f=\SI{0.5115}{\mega\hertz}$\\
+Navigationsdaten $f=\SI{50}{\hertz}$ \\
 C = Civil
+\begin{align}
+    L1(t) &= a_1P(t)W(t)D(t)\cos(f_1t)+a_1C/A(t)D(t)\sin(f_1t)\\
+    L2(t) &= a_2P(t)W(t)D(t)\cos(f_2t)
+\end{align}
 
 \begin{table}
     \centering
