@@ -14,6 +14,73 @@ Wir folgen dem Unterkapitel \ref{sec:ZeitImSignal}.
 \end{align}
 Zur Bestimmung der Position werden vier Satelliten benötigt, wenn die Höhe nicht interessiert, reichen drei Satelliten.
 
+\subsection{Atmosphärische Effekte}
+Signale sind Wellenpakete, mit leicht unterschiedlichen Frequenzen. Die Phasen- und Gruppengeschwindigkeit sind gegeben als
+\begin{align}
+    v_\text{ph} &= \lambda\cdot f\\
+    v_\text{gr} &= v_\text{ph}-\lambda\frac{\symup{d}v_\text{ph}}{\symup{d}\lambda}\;,
+    \intertext{Die Geschwindigkeit in einem Medium ist mit dem Brechungsindex $n$ gegeben als}
+    v &= \frac{\symup{c}}{n}\;.
+    \intertext{Mit Reihenentwicklung und Umformungen kommt man zu}
+    n_\text{ph} &= 1+\frac{c_2}{f^2}+\frac{c_3}{f^3}+\frac{c_4}{f^4}+\ldots\\
+    n_\text{gr} &= 1-\frac{c_2}{f^2}+\ldots
+    \intertext{Die Konstanten $c_i$ sind hierbei abhängig von der Elektronendichte. $c_2 = \num{-40.3}N_e$. Pseuentfernung zu lang und Trägerfrequenz beschleungigt. Mit dem Fermat'schen Prinzip}
+    s &= \int n\,\symup{d}\,s
+\end{align}
+
+\subsubsection{Ionosphäre}
+$\SI{50}{\kilo\meter}-\SI{1000}{\kilo\meter}$
+Für die Ionosphäre kann das Fermat'sche Prinzip umgeschrieben werden um den Wegunterschied zu bestimmen
+\begin{align}
+    \increment^\text{Iono} &= \int n\,\symup{d}\,s-\int\symup{d}\,s_0\;.
+    \intertext{Mit der totalen Anzahl an Elektronen zwischen Satellit und Empfänger TEC ergibt sich}
+    \increment^\text{Iono}_{gr} &= \frac{\num{40.3}}{f^2}\cdot\text{TEC}\;,
+    \intertext{negativ für die Phasengeschwindigkeit. Für $\num{e16}$ Elektronen ergibt sich}
+    \increment^\text{Iono}_{gr} &= \SI{0.16}{\meter}\;.
+\end{align}
+Dieser Fehler ist abhängig vom Sonnenstand, der Strecke durch die Ionosphäre und der Aktivität von Sonnenflecken.
+
+\subsubsection{Troposphäre}
+Ergänze
+\begin{align}
+    \increment^\text{Trop} &= \int(n-1)\symup{d}\,s
+    \shortintertext{mit}
+    N^\text{Trop} &= \num{e16}(n-1)\symup{d}\,s
+    \shortintertext{zu}
+    \increment^\text{Trop} &= \num{e-16}\int N^\text{Trop}\symup{d}\,s\;.
+    \intertext{$N^\text{Trop}$ kann als Summe von Elektronen der trockenen Atmosphäre und der Elektronen aus dem Wasserdampf geschrieben werden. Die Aufteilung ist $\SI{90}{\percent}$ trocken und $\SI{90}{\percent}$ nass. Eine Abschätzung des Fehlers ist auf Meeresoberfläche, im Zenit}
+    \increment^\text{Trop} &\approx \SI{2.3}{\meter}
+\end{align}
+
+\subsection{Relativistische Effekte}
+$S'$ ist das bewegte System
+\subsubsection{Doppler Effekt}
+Zeitdilatation
+\begin{align}
+    \gamma &= \frac{1}{\sqrt{1-\frac{v^2}{\symup{c}^2}}} \\
+    t &= \gamma\cdot\left(t'+\frac{v}{\symup{c}^2}x'\right)\\
+    \increment t &= \gamma\cdot\increment t'
+\end{align}
+2. Ordnung
+\begin{equation}
+    f = \frac{f'}{\gamma}
+\end{equation}
+$f'$ ist die ausgesandte Frequenz
+\subsubsection{Effekte auf die Atomuhr im Satelliten}
+Frequenz der Uhr ist $f_0=\SI{10.23}{\mega\hertz}$, alle internen Prozesse beruhen auf $f_0$
+\begin{align}
+    \delta^\text{rel} &= \frac{f_0'-f_0}{f_0} = \frac{1}{2}\left(\frac{v}{\symup{c}}\right)^{\!\!2}+\frac{\mu}{\symup{c}^2}\left[\frac{1}{R_\text{E}+h}-\frac{1}{r_\text{E}}\right] = \num{-4.464e-10}
+    \intertext{Gravitationskonstante der Erde $\mu$, Erdradius $R_\text{E}=\SI{6370}{\kilo\meter}$, Satellitenhöhe $h=\SI{20200}{\kilo\meter}$}
+    \symup{d}f &= \num{4.464e-10}f_0 = \SI{4.57e-3}{\hertz}
+\end{align}
+\subsubsection{Effekte auf die Empfängeruhr}
+Geschwindigkeit des Empfängers
+\begin{align}
+    v &\approx \SI{0.5}{\kilo\meter\per\second}
+    \shortintertext{damit folgt ein Shift von}
+    \symup{d}f\propto\num{e-12}f_0
+    \intertext{Nach 3 Stunden, $\SI{10}{\nano\second}$, Fehler von $\SI{30}{\centi\meter}$}
+\end{align}
 \begin{table}
     \centering
     \caption{Fehlerquellen und ihre Effekte}
