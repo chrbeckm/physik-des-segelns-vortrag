@@ -45,7 +45,7 @@ Ergänze
 \begin{align}
     \increment^\text{Trop} &= \int(n-1)\symup{d}\,s
     \shortintertext{mit}
-    N^\text{Trop} &= \num{e16}(n-1)\symup{d}\,s
+    N^\text{Trop} &= \num{e16}(n-1)
     \shortintertext{zu}
     \increment^\text{Trop} &= \num{e-16}\int N^\text{Trop}\symup{d}\,s\;.
     \intertext{$N^\text{Trop}$ kann als Summe von Elektronen der trockenen Atmosphäre und der Elektronen aus dem Wasserdampf geschrieben werden. Die Aufteilung ist $\SI{90}{\percent}$ trocken und $\SI{90}{\percent}$ nass. Eine Abschätzung des Fehlers ist auf Meeresoberfläche, im Zenit}
@@ -60,16 +60,15 @@ Zeitdilatation
     \gamma &= \frac{1}{\sqrt{1-\frac{v^2}{\symup{c}^2}}} \\
     t &= \gamma\cdot\left(t'+\frac{v}{\symup{c}^2}x'\right)\\
     \increment t &= \gamma\cdot\increment t'
+    \intertext{2. Ordnung}
+    f &= \frac{f'}{\gamma}
 \end{align}
-2. Ordnung
-\begin{equation}
-    f = \frac{f'}{\gamma}
-\end{equation}
 $f'$ ist die ausgesandte Frequenz
 \subsubsection{Effekte auf die Atomuhr im Satelliten}
-Frequenz der Uhr ist $f_0=\SI{10.23}{\mega\hertz}$, alle internen Prozesse beruhen auf $f_0$
+Frequenz der Uhr ist $f_0=\SI{10.23}{\mega\hertz}$, alle internen Prozesse beruhen auf $f_0$ \\
+Frequenzunterschied aus speziellen und allgemeinen Einflüssen
 \begin{align}
-    \delta^\text{rel} &= \frac{f_0'-f_0}{f_0} = \frac{1}{2}\left(\frac{v}{\symup{c}}\right)^{\!\!2}+\frac{\mu}{\symup{c}^2}\left[\frac{1}{R_\text{E}+h}-\frac{1}{r_\text{E}}\right] = \num{-4.464e-10}
+    \delta^\text{rel} &= \frac{f_0'-f_0}{f_0} = \frac{1}{2}\left(\frac{v}{\symup{c}}\right)^{\!\!2}+\frac{\mu}{\symup{c}^2}\left[\frac{1}{R_\text{E}+h}-\frac{1}{R_\text{E}}\right] = \num{-4.464e-10}
     \intertext{Gravitationskonstante der Erde $\mu$, Erdradius $R_\text{E}=\SI{6370}{\kilo\meter}$, Satellitenhöhe $h=\SI{20200}{\kilo\meter}$}
     \symup{d}f &= \num{4.464e-10}f_0 = \SI{4.57e-3}{\hertz}
 \end{align}
@@ -78,9 +77,10 @@ Geschwindigkeit des Empfängers
 \begin{align}
     v &\approx \SI{0.5}{\kilo\meter\per\second}
     \shortintertext{damit folgt ein Shift von}
-    \symup{d}f\propto\num{e-12}f_0
-    \intertext{Nach 3 Stunden, $\SI{10}{\nano\second}$, Fehler von $\SI{30}{\centi\meter}$}
+    \symup{d}f&\propto\num{e-12}f_0
 \end{align}
+Nach 3 Stunden, $\SI{10}{\nano\second}$, Fehler von $\SI{30}{\centi\meter}$
+
 \begin{table}
     \centering
     \caption{Fehlerquellen und ihre Effekte}
