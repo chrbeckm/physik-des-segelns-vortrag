@@ -10,13 +10,11 @@ build/main.pdf: FORCE | build
 	TEXINPUTS=build: \
 	BIBINPUTS=build: \
 	latexmk $(texoptions) main.tex
-	cp build/main.pdf main.pdf
 
 build/notizen.pdf: FORCE | build
 	TEXINPUTS=build: \
 	BIBINPUTS=build: \
 	latexmk $(texoptions) notizen.tex
-	cp build/notizen.pdf notizen.pdf
 
 FORCE:
 
